@@ -1,0 +1,53 @@
+﻿@model Employee
+
+@{
+    //Layout = "~/Views/Shared/_layout.cshtml";
+    // ViewBag.title = "Details";
+    var ImagePath = "~/Images/" + (Model.FilePath ?? "Men.png");
+}
+
+
+@*<h3>@ViewData["page"]</h3>
+
+    @{
+        var emp = ViewData["EmpModal"] as Test.Models.Employee;
+
+    }
+    <div>
+        NAME : @emp.Name
+    </div>
+    <div>
+        NAME : @Model.Name
+    </div>
+    
+*@
+
+<div class="row  justify-content-center m-3">
+    <div class="col-sm-5">
+        <div class="card m-1">
+            <div class="card-header" >
+                @Model.Name
+            </div>
+            <div class="card-body text-center">
+                @*<img asp-append-version="true" class="card-img-top  ImageThublail" src="@ImagePath" />*@
+
+                <h4>Emp ID : @Model.Id</h4>
+                <h4>Employee Name: @Model.Name</h4>
+
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back</a>
+                <a asp-controller="home" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+@section Script
+{
+    <script src="~/Js/CustomScript.js"></script>
+}

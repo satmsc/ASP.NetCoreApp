@@ -1,0 +1,9 @@
+﻿@model int
+<div class="alert alert-danger mt-1 mb-1">
+    <h4>404 Not found Error:</h4>
+    <hr />
+    <h5>
+        Employee with id : @Model
+    </h5>
+</div>
+<a asp-action="Index" asp-controller="Home" class="btn btn-outline-success">Go back to list of employees</a>
